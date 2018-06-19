@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   padding: 5px 25px;
-  background-image: linear-gradient(116deg, #08aeea 0%, #2af598 100%);
+  background-color: #FAD961;
+  background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
   color: white;
   font-weight: bold;
   text-transform: uppercase;
