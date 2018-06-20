@@ -1,19 +1,19 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Button = styled.button`
   padding: 5px 25px;
-  background-color: #FAD961;
-  background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+  background-color: #fad961;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   font-family: sans-serif;
-  filter: hue-rotate(0deg);
+  filter: ${({ disabled }) => (disabled ? 'grayscale(1)' : 'hue-rotate(0deg)')};
   transition: filter 300ms linear;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   &:focus,
   &:hover {
-    filter: hue-rotate(45deg);
+    filter: ${({ disabled }) => !disabled && 'hue-rotate(45deg)'};
   }
-`;
+`

@@ -2,33 +2,48 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+import Auth from '../containers/Auth'
 import Header from '../components/header'
+import { Container as BaseContainerStyles } from '../styledComponents/layout'
+
 import './index.css'
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} background="background-color: #FAD961;background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);" />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}>
-      {children()}
-    </div>
-  </div>
+const Container = BaseContainerStyles.extend`
+  padding-top: 0;
+`;
+
+const Layout = ({ children, data, ...props }) => (
+  <Auth>
+    {auth => {
+      return (
+        <div>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          <Header
+            background="background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)"
+            title={data.site.siteMetadata.title}
+            {...auth}
+          />
+          <Container>
+            {children({
+              ...props,
+              ...auth,
+            })}
+          </Container>
+        </div>
+      );
+    }}
+  </Auth>
 )
 
 Layout.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.object,
 }
 
 export default Layout
