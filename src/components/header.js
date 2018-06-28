@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import { Container as BaseContainerStyles } from '../styledComponents/layout'
 import SignIn from './SignIn/index'
-import GoogleIcon from './Icons/Google'
+import GoogleIcon from './icons/Google'
 
 const Container = BaseContainerStyles.extend`
   display: flex;
