@@ -11,6 +11,8 @@ This is Part 3
 
 https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-3-89fa499534fd
 
+> **Note:** this is using Tyrone's Firebase account at the moment you will need to create your own or an AGO one if this will be used. Ask Tyrone how to set one up for the poll database.
+
 ## gatsby-starter-default 
 The default Gatsby starter was used to start this project.
 
