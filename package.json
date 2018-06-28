@@ -25,7 +25,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint **/*.{js,jsx}"
+    "lint": "eslint **/*.{js,jsx}",
+    "deploy": "npm run build && netlify deploy"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
