@@ -127,7 +127,7 @@ class PollContainer extends Component {
                 .then(() => {
                     this.setState({
                         loading: false,
-                        hasVoted: true,
+                        //hasVoted: true,
                     });
 
                     this.startResultListener();
@@ -183,7 +183,7 @@ class PollContainer extends Component {
         // we can stop listening when the component unmounts
         this.stopResultListener = this.results.onSnapshot(
             snapshot => {
-                snapshot.docChanges.forEach(change => {
+                snapshot.docChanges().forEach(change => {
                     const { optionId } = change.doc.data();
 
                     if (change.type === 'added') {

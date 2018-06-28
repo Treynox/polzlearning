@@ -1,7 +1,15 @@
 # Polling App
-This is [Part 1](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-1-78a03a633092)
+This is Part 1
 
-This is [Part 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
+ https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-1-78a03a633092)
+
+This is Part 2
+
+https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc
+
+This is Part 3
+
+https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-3-89fa499534fd
 
 ## gatsby-starter-default 
 The default Gatsby starter was used to start this project.
@@ -18,8 +26,6 @@ gatsby develop
 
 ## Deploy
 
-See Tharan for AWS access for S3 bucket
+See Tharan for AWS access for an S3 bucket
 
-or to test it yourself try Nelify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+or to test it yourself try [Netlify](https://www.netlify.com/)
